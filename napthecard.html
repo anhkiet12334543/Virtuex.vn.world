@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">
+    <title>Nạp Thẻ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .toan-trang {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .dau-trang {
+            background: linear-gradient(to right, #000000,#434343);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .dau-trang .ten-trang {
+            display: flex;
+            align-items: center;
+        }
+        .dau-trang .ten-trang img {
+            width: 60px;
+            margin-right: 10px;
+        }
+        .dau-trang .ten-trang h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .menu-chinh ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .menu-chinh ul li {
+            display: inline-block;
+        }
+        .menu-chinh ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu-chinh ul li a:hover,
+        .menu-chinh ul li a.active {
+            background-color: #333333;
+        }
+        .noi-dung-chinh {
+            flex: 1;
+            padding: 20px;
+            background-color: #1e1e1e;
+        }
+        .noi-dung-chinh h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .noi-dung-chinh form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #292929;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .noi-dung-chinh form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .noi-dung-chinh form input,
+        .noi-dung-chinh form select,
+        .noi-dung-chinh form button {
+            width: 100%;
+            padding: 1px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .noi-dung-chinh form input,
+        .noi-dung-chinh form select {
+            background-color: #444444;
+            color: #ffffff;
+        }
+        .noi-dung-chinh form button {
+            background-color: #00b894;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .noi-dung-chinh form button:hover {
+            background-color: #019875;
+        }
+        .chan-trang {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+		.chan-trang a{
+			color: white;
+			text-decoration:none;
+		}
+		.chan-trang a:hover{
+			text-decoration: underline;
+		}
+		.chan-trang{
+			 background: linear-gradient(to right, #000000,#434343);
+		}
+    </style>
+</head>
+<body>
+    <div class="toan-trang">
+        <!-- Header -->
+        <header class="dau-trang">
+            <div class="ten-trang">
+                <img src="img/z5964487405751_e0b3f1ff1536c6178086421aa1a5a403.jpg" alt="Logo" width="30">
+                <h1>Virtuex</h1>
+            </div>
+            <nav class="menu-chinh">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="napthecard.html">Nạp Thẻ</a></li>
+                <li><a href="vongquaymaman.html">Chọn Ô May Mắn</a></li>
+                <li><a href="caythue.html">Cày Thuê</a></li>
+                <li><a href="tintuc.html">Tin Tức</a></li>
+                <li><a href="shopgame.html">Shop Game Pass</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+                <li><a href="#">Mini Game</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="noi-dung-chinh">
+            <h2>Nạp Thẻ</h2>
+            <form action="naptien_process.php" method="post">
+                <label for="loai-the">Loại thẻ:</label>
+                <select id="loai-the" name="loai-the">
+                    <option value="viettel">Viettel</option>
+                    <option value="mobifone">Mobifone</option>
+                    <option value="vinaphone">Vinaphone</option>
+                </select>
+                
+                <label for="so-seri">Số Seri:</label>
+                <input type="text" id="so-seri" name="so-seri" placeholder="Nhập số seri">
+                
+                <label for="ma-the">Mã Thẻ:</label>
+                <input type="text" id="ma-the" name="ma-the" placeholder="Nhập mã thẻ">
+                
+                <button type="submit">Nạp Thẻ</button>
+            </form>
+        </main>
+
+        <!-- Footer -->
+        <footer class="chan-trang">
+           <p>Địa chỉ: 34C Đường 30/2, Quận 1, Thành phố Vũng Tàu.</p>
+            <p>Email: <a href="mailto:support@virtuex.com">support@virtuex.com</a> | Hotline: 0123-456-789</p>
+            <p><a href="about.html">Giới thiệu</a> | <a href="privacy.html">Chính sách bảo mật</a> | <a href="terms.html">Điều khoản sử dụng</a></p>
+        </footer>
+		
+    </div>
+</body>
+</html>

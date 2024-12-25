@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtuex - Cửa hàng Game Item</title>
+    <link href="styles/defaul.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="toan-trang">
+        <!-- Header -->
+        <header class="dau-trang">
+            <div class="logo-chinh">
+                <img src="img/z5964487405751_e0b3f1ff1536c6178086421aa1a5a403.jpg" alt="Virtuex Logo" width="120" height="90">
+                <h1 class="ten-trang">VIRTUEX</h1>
+            </div>
+            <form class="thanh-tim-kiem">
+                <input type="search" name="timkiem" placeholder="Tìm Kiếm..." size="40">
+            </form>
+            <nav class="menu-nguoi-dung">
+                <a href="#">☰</a>
+                <a href="Dangnhap.html">Đăng Nhập</a>
+				<a href="#">\</a>
+                <a href="dangky.html">Đăng Ký</a>
+            </nav>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="menu-chinh">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="napthecard.html">Nạp Thẻ</a></li>
+                <li><a href="vongquaymaman.html">Chọn Ô May Mắn</a></li>
+                <li><a href="caythue.html">Cày Thuê</a></li>
+                <li><a href="tintuc.html">Tin Tức</a></li>
+                <li><a href="shopgame.html">Shop Game Pass</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+                <li><a href="#">Mini Game</a></li>
+                <li class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=100076558118484"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/anhkietTra24824"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/tanhkiet184/"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="noi-dung-chinh">
+            <!-- Advertisement -->
+            <section class="quang-cao">
+                <img src="img/quangcao.jpg" alt="Quảng cáo" class="anh-quang-cao">
+            </section>
+
+            <!-- Product Sections -->
+            <section class="phan-san-pham">
+                <h2 class="tieu-de">Shop Acc Game</h2>
+                <ul class="danh-sach-san-pham">
+                    <li class="san-pham">Sản phẩm 1</li>
+                    <li class="san-pham">Sản phẩm 2</li>
+                    <li class="san-pham">Sản phẩm 3</li>
+                </ul>
+            </section>
+
+            <section class="phan-san-pham">
+                <h2 class="tieu-de">Shop Game Pass</h2>
+                <ul class="danh-sach-san-pham">
+                    <li class="san-pham">Sản phẩm 1</li>
+                    <li class="san-pham">Sản phẩm 2</li>
+                    <li class="san-pham">Sản phẩm 3</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="chan-trang">
+            <div class="logo-chan-trang">
+                <img src="img/z5964487405751_e0b3f1ff1536c6178086421aa1a5a403.jpg" alt="Virtuex Logo Footer" width="150" height="100">
+            </div>
+            <div class="thong-tin-chung">
+                <h2>Thông Tin Chung</h2>
+                <p>Virtuex là nền tảng cung cấp các sản phẩm và dịch vụ game hàng đầu, được thiết kế để mang đến trải nghiệm tiện lợi, an toàn và chuyên nghiệp cho cộng đồng game thủ. Chúng tôi tự hào là cầu nối giúp người chơi tiếp cận dễ dàng với những giá trị thực sự trong thế giới ảo.</p>
+            </div>
+            <div class="ho-tro-khach-hang">
+                <h2>Hỗ Trợ Khách Hàng</h2>
+                <p>Virtuex cung cấp dịch vụ hỗ trợ khách hàng 24/24...</p>
+                <ul>
+                    <li>Hỗ trợ qua điện thoại: <strong>1900-123-456</strong></li>
+                    <li>Email: <strong>support@virtuex.com</strong></li>
+                    <li>Chat Hỗ Trợ: Truy cập website</li>
+					<p class="sieudep"><a href="about.html">Giới thiệu</a></p>
+                </ul>
+            </div>
+				<div class="social-icons">
+					<a href="https://web.facebook.com/profile.php?id=100076558118484"><i class="fab fa-facebook"></i></a>
+					<a href="https://x.com/anhkietTra24824"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/tanhkiet184/"><i class="fab fa-instagram"></i></a>
+				</div>
+        </footer>
+    </div>
+    <button id="chatbot-toggle-btn">Hỗ Trợ-Box&nbsp;</button>
+    <div class="chatbot-popup" id="chatbot-popup">
+        <div class="chat-header">
+            <span><a href="https://www.thecodinghubs.com/" target="_blank">ChatBox</a></span>
+            <button id="close-btn">&times;</button>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div id="message-section">
+                <div class="message bot-message"><span>Xin chào, tôi có thể giúp gì cho bạn?</span></div>
+            </div>
+            <div id="user-messages"></div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Gửi tin nhắn...">
+            <button id="send-btn">Gửi</button>
+        </div>
+    </div>
+    <script src="scripst/taitrang.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Ô May Mắn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .toan-trang {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .dau-trang {
+            background: linear-gradient(to right, #000000,#434343);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .dau-trang .ten-trang {
+            display: flex;
+            align-items: center;
+        }
+        .dau-trang .ten-trang img {
+            width: 60px;
+            margin-right: 10px;
+        }
+        .dau-trang .ten-trang h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .menu-chinh ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .menu-chinh ul li {
+            display: inline-block;
+        }
+        .menu-chinh ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu-chinh ul li a:hover,
+        .menu-chinh ul li a.active {
+            background-color: #333333;
+        }
+        .noi-dung-chinh {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 20px;
+        }
+        .grid-item {
+            width: 100px;
+            height: 100px;
+            background-color: #444444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .grid-item:hover {
+            background-color: #555555;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00b894;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #019875;
+        }
+		.chan-trang a{
+			color: white;
+			text-decoration: none;
+		}
+		.chan-trang a:hover{
+			text-decoration:underline;
+		}
+		.chan-trang {
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+    <div class="toan-trang">
+        <!-- Header -->
+        <header class="dau-trang">
+            <div class="ten-trang">
+                <img src="img/z5964487405751_e0b3f1ff1536c6178086421aa1a5a403.jpg" alt="Logo" width="30">
+                <h1>Virtuex</h1>
+            </div>
+            <nav class="menu-chinh">
+                <ul>
+                   <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="napthecard.html">Nạp Thẻ</a></li>
+                <li><a href="vongquaymaman.html">Chọn Ô May Mắn</a></li>
+                <li><a href="caythue.html">Cày Thuê</a></li>
+                <li><a href="tintuc.html">Tin Tức</a></li>
+                <li><a href="shopgame.html">Shop Game Pass</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+                <li><a href="#">Mini Game</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="noi-dung-chinh">
+            <h2>Chọn Ô May Mắn</h2>
+            <div class="grid-container">
+                <div class="grid-item" onclick="chonO(this)">O</div>
+                <div class="grid-item" onclick="chonO(this)">X</div>
+                <div class="grid-item" onclick="chonO(this)">O</div>
+                <div class="grid-item" onclick="chonO(this)">X</div>
+                <div class="grid-item" onclick="chonO(this)">O</div>
+                <div class="grid-item" onclick="chonO(this)">X</div>
+                <div class="grid-item" onclick="chonO(this)">O</div>
+                <div class="grid-item" onclick="chonO(this)">X</div>
+                <div class="grid-item" onclick="chonO(this)">O</div>
+            </div>
+            <button onclick="lamMoi()">Làm Mới</button>
+        </main>
+
+        <!-- Footer -->
+        <footer class="chan-trang">
+            <p>Địa chỉ: 34C Đường 30/2, Quận 1, Thành phố Vũng Tàu.</p>
+            <p>Email: <a href="mailto:support@virtuex.com">support@virtuex.com</a> | Hotline: 0123-456-789</p>
+            <p><a href="about.html">Giới thiệu</a> | <a href="privacy.html">Chính sách bảo mật</a> | <a href="terms.html">Điều khoản sử dụng</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const topList = document.getElementById('top-list-content');
+        const ketQua = ["Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 100 Robux", "Trúng 5 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 1 Robux", "Trúng 10 Robux", "Trúng 1.000.000 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 100 Robux", "Trúng 50 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 100 Robux", "Trúng 5 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 1 Robux", "Trúng 10 Robux", "Trúng 1.000.000 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 100 Robux", "Trúng 50 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1 Robux", "Trúng 1.0000.000.000.000.000 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Trúng 1.0000.000.000.000.000 Robux", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!" ,"Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!", "Chúc Bạn May Mắn Lần Sau!",];
+
+        function chonO(element) {
+            const randomIndex = Math.floor(Math.random() * ketQua.length);
+            const result = ketQua[randomIndex];
+            alert(`Kết quả: ${result}`);
+
+            if (result === "Trúng 1.0000.000.000.000.000 Robux") {
+                const name = prompt("Chúc mừng bạn trúng giải lớn! Nhập tên của bạn:");
+                if (name) {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${name} - ${result}`;
+                    topList.appendChild(listItem);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
